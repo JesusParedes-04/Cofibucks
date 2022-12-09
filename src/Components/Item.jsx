@@ -10,7 +10,7 @@ const Item = ({ item }) => {
                 <div className="card text-center border border-0" >
                     <img src={item.Imagen} className="card-img-top img-fluid" alt={item.nombre} />
                     <div className="card-body">
-                        <p className="card-text"> {item.nombre}</p>
+                        <p className="card-text"> <b className="fs-5 text-uppercase">{item.nombre}</b></p>
                     </div>
                 </div>
         </Link>

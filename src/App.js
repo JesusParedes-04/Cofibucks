@@ -6,6 +6,7 @@ import ItemListContainer from "./Components/ItemListContainer";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import ItemDetailContainer from "./Components/ItemDetailContainer";
+import Experienciacofi from "./Components/Experienciacofi";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path={"/"} element={<Home />} />
+        <Route path={"/experiencia"} element={<Experienciacofi mensaje= {'Sumate a la experiencia Cofi'} />} />
         <Route path={"/category"} element={<ItemListContainer />} />
         <Route path={"/category/:id"} element={<ItemListContainer />} />
         <Route path={"/item/:id"} element={<ItemDetailContainer />} />

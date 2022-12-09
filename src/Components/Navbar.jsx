@@ -10,7 +10,7 @@ const Navbar = () => {
           <div className="col-md-6">
             <nav className="navbar navbar-expand-lg navbar-light">
               <div className="container-fluid">
-                <NavLink className="navbar-brand" to={"/category/"}>
+                <NavLink className="navbar-brand" to={"/category"}>
                   <img
                     src="../image/Imagen-Logo.png"
                     alt="logo-principal"
@@ -90,6 +90,17 @@ const Navbar = () => {
                           </NavLink>
                         </li>
                       </ul>
+                    </li>
+
+                    <li>
+                      {" "}
+                      <NavLink
+                        className="nav-link"
+                        activeclassname="page"
+                        to={"/experiencia/"}
+                      >
+                        Experiencia Cofi
+                      </NavLink>
                     </li>
                   </ul>
                 </div>

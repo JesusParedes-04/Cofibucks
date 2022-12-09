@@ -1,42 +1,42 @@
 [
     {
-        "id":1, "nombre":"Skinny Vainilla Latte", "descripcion": "Café espresso con leche descremada al vapor y toques de vainilla sin azúcar.", "categoria": "cafe-caliente", "precio": 1500, "stock": 10,
-        "Imagen":"https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-03%2FSkinny%20Vainilla%20Latte%20425x425%20sin%20fondo.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop"
+        "id":1, "nombre":"Skinny Vainilla Latte helado Venti", "descripcion": "Café Espresso mezclado con leche fría, cubos de hielo y jarabe de vainilla sin azúcar.", "categoria": "cafe-caliente", "precio": 1500, "stock": 10,
+        "Imagen":"https://www.starbucks.pe/Multimedia/productos/detalle/SKINNY_VAINILLA_LATTE_HELADO_V2.png"
     },
 
     {
-        "id":2, "nombre":"Vainilla Latte", "descripcion": "Café espresso con leche al vapor y toques de vainilla.", "precio": 1300, "stock": 5,  "categoria": "cafe-frio",
-        "Imagen":"https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-03%2FSkinny%20Vainilla%20Latte%20425x425%20sin%20fondo.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop"
+        "id":2, "nombre":"Latte Frío con bebida de avena Venti", "descripcion": "Café espresso de cuerpo completo mezclado con bebida de avena vaporizada.", "precio": 1300, "stock": 5,  "categoria": "cafe-frio",
+        "Imagen":"https://www.starbucks.pe/Multimedia/productos/detalle/ICED_LATTE_CON_LECHE_DE_AVENA_ECOMMERCE.png"
     },
 
     {
-        "id":3, "nombre":"Latte", "descripcion": "Café espresso con leche vaporizada.", "precio": 1000, "stock": 7, "categoria": "Té Caliente",
-        "Imagen":"https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-02%2FLatte%20425x425%20verde_1.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop"
+        "id":3, "nombre":"Chocolúcuma cream Frappuccino Venti", "descripcion": "Deliciosa lúcuma mezclada con mocha, jarabe de azucar y chispas sabor chocolate, decorado con crema batida y extra chispas sabor chocolate.", "precio": 1000, "stock": 7, "categoria": "frappuchino",
+        "Imagen":"https://www.starbucks.pe/Multimedia/productos/detalle/CHOCOLUCUMA_CREAM_FRAPP_V2.png"
     },
 
     {
-        "id":4, "nombre":"Dulce de Leche Latte", "descripcion": "Café espresso con dulce de leche, leche al vapor con crema batida y salsa de caramelo.",  "categoria": "Calientes", "precio": 1800, "stock": 10,
-        "Imagen":"https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-02%2FDulce%20de%20leche%20latte%20425x425%20verde_1.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop"
+        "id":4, "nombre":"Black & White Mocha Venti", "descripcion": "Café Espresso con capas de mocha y mocha blanco combinadas en leche vaporizaday chispas sabor chocolate. No lleva crema batida. Sin endulzantes.",  "categoria": "Calientes", "precio": 1800, "stock": 10,
+        "Imagen":"https://www.starbucks.pe/Multimedia/productos/detalle/BLACK_AND_WHITE_MOCHA_V2.png"
     },
 
     {
-        "id":5, "nombre":"Cappuchino", "descripcion": "Café espresso, leche vaporizada y abundante espuma de leche.", "categoria": "frappuchino" , "precio": 1700, "stock": 7,
-        "Imagen":"https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-03%2FCappuccino%20425x425%20sin%20fondo.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop"
+        "id":5, "nombre":"Peppermint Mocha Frappuccino Grande", "descripcion": "Bebida de salsa de chocolate y jarabe de menta combinados con café y leche, mezclada con hielo. Cubierta con crema batida y baño de mocha. No incluye endulzantes adicionales.", "categoria": "frappuchino" , "precio": 1700, "stock": 7,
+        "Imagen":"https://www.starbucks.pe/Multimedia/productos/detalle/Peppermint_Mocha_Latte_Frappuccino_v1.png"
     },
 
     {
-        "id":6, "nombre":"Café Americano", "descripcion": "Café espresso combinado con agua al mejor estilo americano.", "categoria": "cafe-frio", "precio": 900, "stock": 10,
-        "Imagen":"https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-03%2FAmericano%20425x425%20sin%20fondo.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop"
+        "id":6, "nombre":"Café Americano", "descripcion": "Café Espresso de cuerpo completo con agua caliente. En caso la pidas por Delivery, la bebida se entregará en un vaso de tamaño mayor para evitar derrames.", "categoria": "cafe-frio", "precio": 900, "stock": 10,
+        "Imagen":"https://www.starbucks.pe/Multimedia/productos/detalle/AMERICANO_V2.png"
     },
 
     {
-        "id":7, "nombre":"Mocha", "descripcion": "Chocolate con café espresso y leche al vapor, con crema batida.", "categoria": "cafe-caliente", "precio": 1200, "stock": 9,
-        "Imagen":"https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-03%2FMocha%20425x425%20sin%20fondo.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop"
+        "id":7, "nombre":"Mocha Café Venti", "descripcion": "Café Espresso mezclado con mocha y leche vaporizada. Sin endulzantes.", "categoria": "cafe-caliente", "precio": 1200, "stock": 9,
+        "Imagen":"https://www.starbucks.pe/Multimedia/productos/detalle/MOCHA_CAFE_V2.png"
     },
 
     {
-        "id":8, "nombre":"Caramel Machiatto", "descripcion": "Vainilla y leche manchada con espresso, finalizada con el característico dibujo de caramelo.", "categoria": "cafe-caliente", "precio": 1300, "stock": 10,
-        "Imagen":"https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-02%2FCaramel%20Macchiato%20425x425%20verde_1.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop"
+        "id":8, "nombre":"Caramel Macchiato Venti", "descripcion": "Leche vaporizada con vainilla, coronado con shot de café Espresso y decorado con una rejilla de caramelo. Sin endulzantes.", "categoria": "cafe-caliente", "precio": 1300, "stock": 10,
+        "Imagen":"https://www.starbucks.pe/Multimedia/productos/detalle/CARAMEL_MACCHIATO_V2.png"
     }
 
 ]
