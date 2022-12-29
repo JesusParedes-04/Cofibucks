@@ -1,7 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-const ItemCount = ({ stock }) => {
+
+
+const ItemCount = ({ stock, onAdd }) => {
     const [counter, setCounter] = useState(1)
+    //Va llegar via prop del otro componente
+    const [itemStock, setItemStock] = useState(stock)
+    //Tecnica rendering: Cuando se le haga click hará el switch al boton carrito
+    const [vendido, setVendido] = useState(false)
+
 
     const decrementarStock = () => {
         if (counter > 1) {
@@ -10,16 +18,33 @@ const ItemCount = ({ stock }) => {
     }
 
     const incrementarStock = () => {
-        if (counter < stock) {
+        if (counter < itemStock) {
             setCounter(counter + 1)
         }
     }
 
-    const onAdd = () => {
-        if (stock > 0) {
-            console.log('Agregaste ' + counter + ' productos al carrito!')
+    const addToCart = (quantity) => {
+
+        //Validacion
+
+        if (counter <= itemStock) {
+
+            //Counter es el numero del medio que se va inicializar en uno
+            setCounter(1)
+            //Actualiza la cantidad del stock
+            setItemStock(itemStock - quantity)
+            //Switchea el btn
+            setVendido(true)
+            onAdd(quantity)
         }
     }
+
+    useEffect(() => {
+
+        setItemStock(stock)
+
+    }, [stock])
+
     return (
         <div>
             <div className="row mb-3">
@@ -34,7 +59,12 @@ const ItemCount = ({ stock }) => {
 
             <div className="row">
                 <div className="col-md-6 text-center">
-                    <button type="button" className="btn btn-outline-primary" onClick={onAdd}>Agregar al Carrito</button>
+
+                    {/* Aplicamos tecnica de rendering */}
+
+                    {vendido ? < Link to={"/cart"} className="btn btn-outline-primary"> Terminar La Compra </Link> :
+
+                        <button type="button" className="btn btn-outline-primary" onClick={() => { addToCart(counter) }}>Agregar al Carrito</button>}
                 </div>
             </div>
         </div>

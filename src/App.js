@@ -7,21 +7,26 @@ import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import ItemDetailContainer from "./Components/ItemDetailContainer";
 import Experienciacofi from "./Components/Experienciacofi";
+import CartContextProvider from "./Components/context/CartContext";
+import Cart from "./Components/Cart";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path={"/"} element={<Home />} />
-        <Route path={"/experiencia"} element={<Experienciacofi mensaje= {'Sumate a la experiencia Cofi'} />} />
-        <Route path={"/category"} element={<ItemListContainer />} />
-        <Route path={"/category/:id"} element={<ItemListContainer />} />
-        <Route path={"/item/:id"} element={<ItemDetailContainer />} />
-        <Route path={"*"} element={<Error404 />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <CartContextProvider>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path={"/"} element={<Home />} />
+          <Route path={"/experiencia"} element={<Experienciacofi mensaje={'Sumate a la experiencia Cofi'} />} />
+          <Route path={"/category"} element={<ItemListContainer />} />
+          <Route path={"/category/:id"} element={<ItemListContainer />} />
+          <Route path={"/item/:id"} element={<ItemDetailContainer />} />
+          <Route path={"/cart"} element={<Cart />} />
+          <Route path={"*"} element={<Error404 />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </CartContextProvider>
   );
 }
 
