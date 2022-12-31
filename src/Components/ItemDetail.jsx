@@ -5,7 +5,7 @@ import ItemCount from "./ItemCount";
 
 
 const ItemDetail = ({ item }) => {
-    const addItem = useContext(CartContext)
+    const { addItem } = useContext(CartContext)
     const [itemStock, setItemStock] = useState(0);
 
     //Creamos funcion onAdd que tomará el stock del useState (0) y le restará la cantidad(quantity) y lo actualizará con el setitemstock

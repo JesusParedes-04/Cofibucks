@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 
-
 const ItemCount = ({ stock, onAdd }) => {
     const [counter, setCounter] = useState(1)
     //Va llegar via prop del otro componente
@@ -50,9 +49,9 @@ const ItemCount = ({ stock, onAdd }) => {
             <div className="row mb-3">
                 <div className="col-md-6 text-center">
                     <div className="btn-group" role="group" aria-label="Basic outlined example">
-                        <button type="button" className="btn btn-outline-primary" onClick={decrementarStock}>-</button>
-                        <button type="button" className="btn btn-outline-primary">{counter}</button>
-                        <button type="button" className="btn btn-outline-primary" onClick={incrementarStock}>+</button>
+                        <button type="button" className="btn btn-outline-success" onClick={decrementarStock}>-</button>
+                        <button type="button" className="btn btn-outline-success">{counter}</button>
+                        <button type="button" className="btn btn-outline-success" onClick={incrementarStock}>+</button>
                     </div>
                 </div>
             </div>
@@ -62,9 +61,9 @@ const ItemCount = ({ stock, onAdd }) => {
 
                     {/* Aplicamos tecnica de rendering */}
 
-                    {vendido ? < Link to={"/cart"} className="btn btn-outline-primary"> Terminar La Compra </Link> :
+                    {vendido ? < Link to={"/cart"} className="btn btn-outline-success"> Terminar La Compra </Link> :
 
-                        <button type="button" className="btn btn-outline-primary" onClick={() => { addToCart(counter) }}>Agregar al Carrito</button>}
+                        <button type="button" className="btn btn-outline-success" onClick={() => { addToCart(counter) }}>Agregar al Carrito</button>}
                 </div>
             </div>
         </div>

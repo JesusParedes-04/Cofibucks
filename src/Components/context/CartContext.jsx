@@ -1,5 +1,4 @@
-import React, { createContext } from "react";
-import { useState } from "react";
+import React, { useState, createContext } from "react";
 
 export const CartContext = createContext();
 
@@ -14,8 +13,8 @@ const CartContextProvider = ({ children }) => {
     const addItem = (item, quantity) => {
 
         if (isInCart(item.id)) {
-            let pos = cart.findIndex(x => x.id === item.id)
-            cart[pos].quantity += quantity;
+            let pos = cart.findIndex(x => x.id === item.id) //2 --> si ya existe el elemento, se suma
+            cart[pos].quantity += quantity; //cart[2].quantity +=5 
             setCart([...cart]);
         } else {
             setCart([...cart, { ...item, quantity: quantity }])
@@ -23,13 +22,14 @@ const CartContextProvider = ({ children }) => {
     }
 
     const removeItem = (id) => {
-        const products = cart.filter(x => x.id !== id)
+        const products = cart.filter(x => x.id !== id);
         setCart([...products])
     }
 
     const clear = () => {
         setCart([]);
     }
+
 
     const cartTotal = () => {
 
@@ -38,7 +38,7 @@ const CartContextProvider = ({ children }) => {
 
     const sumTotal = () => {
 
-        return cart.reduce((total, item) => total += item.quantity * item.price, 0);
+        return cart.reduce((total, item) => total += item.quantity * item.precio, 0);
     }
 
     return (

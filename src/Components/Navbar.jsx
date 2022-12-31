@@ -10,13 +10,13 @@ const Navbar = () => {
           <div className="col-md-6">
             <nav className="navbar navbar-expand-lg navbar-light">
               <div className="container-fluid">
-                <NavLink className="navbar-brand" to={"/category"}>
+                <Link className="navbar-brand" to={"/category"}>
                   <img
                     src="../image/Imagen-Logo.png"
                     alt="logo-principal"
                     width="120"
                   />
-                </NavLink>
+                </Link>
                 <button
                   className="navbar-toggler"
                   type="button"
