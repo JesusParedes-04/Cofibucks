@@ -15,12 +15,13 @@ const ItemDetail = ({ item }) => {
     }
 
 
-    //Cuando me traiga el producto me debe actualizar mi estado itemstock
+    // Cuando me traiga el producto me debe actualizar mi estado itemstock
     useEffect(() => {
 
         setItemStock(item.stock)
 
     }, [item])
+
 
 
     return (
