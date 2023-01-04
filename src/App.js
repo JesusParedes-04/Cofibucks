@@ -9,6 +9,7 @@ import Home from "./Components/Home";
 import Experienciacofi from "./Components/Experienciacofi";
 import CartContextProvider from "./Components/context/CartContext";
 import Cart from "./Components/Cart";
+import Checkout from "./Components/Checkout";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path={"/category/:id"} element={<ItemListContainer />} />
           <Route path={"/item/:id"} element={<ItemDetailContainer />} />
           <Route path={"/cart"} element={<Cart />} />
+          <Route path={"/checkout"} element={<Checkout />} />
           <Route path={"*"} element={<Error404 />} />
         </Routes>
         <Footer />
