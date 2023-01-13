@@ -12,7 +12,7 @@ const ThankYouComponent = () => {
                     <div className="alert alert-success" role="alert">
 
                         <h1>Gracias Por tu Compra</h1>
-                        <h8> Tu Número de Orden es : {id} </h8>
+                        <p> Tu Número de Orden es : {id} </p>
 
 
                     </div>
