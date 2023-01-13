@@ -7,7 +7,7 @@ const Footer = () => {
 
 
             <div className="row m">
-                <div className="col d-flex align-items-center justify-content-center pt-3 pb-3 bg-success">
+                <div className="col d-flex align-items-center justify-content-center pt-3 pb-3 bg-success rounded-3">
 
                     <a href="https://www.facebook.com/">
                         <span>

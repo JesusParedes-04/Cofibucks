@@ -1,55 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import arrayProductos from "./json/productos.json"
 import ItemList from "./ItemList";
-import { addDoc, collection, doc, getDocs, getFirestore, query, where } from "firebase/firestore"
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore"
+import Loading from "./Loading";
 
 
 const ItemListContainer = () => {
 
-    const [items, setItems] = useState([])
+    const [items, setItems] = useState([]);
+    const[loading, setLoading] = useState(true);
     const { id } = useParams();
-
-    // useEffect(() => {
-    //     const promesa = new Promise((resolve, reject) => {
-    //         setTimeout(() => {
-    //             resolve(id ? arrayProductos.filter(item => item.categoria === id) : arrayProductos);
-    //         }, 2000);
-    //     });
-    //     promesa.then((data) => {
-    //         setItems(data);
-    //     })
-    // }, [id])
-
-
-
-    //-------- Proceso para cargar productos en nuestra collection ------
-    // addDoc solo lo utilizamos para cargar productos en nuestra coleccion
-
-
-    // useEffect(() => {
-
-    //     const db = getFirestore();
-    //     const itemsCollection = collection(db, 'Items')
-
-    //     arrayProductos.forEach((item) => {
-
-    //         addDoc(itemsCollection, { nombre: item.nombre, descripcion: item.descripcion, precio: item.precio, Imagen: item.Imagen, stock: item.stock, categoria: item.categoria })
-
-    //     })     //Guardo el objeto con las keys y campos que yo quiero
-
-
-    //     arrayProductos.forEach((item) => {
-
-    //         addDoc(itemsCollection, {item})  //Guardo el objeto original y completo
-    //     })
-
-
-    // }, []);
-
-
-    //Consulta a nuestra coleccion de base de datos
-
 
     useEffect(() => {
 
@@ -64,8 +24,9 @@ const ItemListContainer = () => {
         getDocs(q).then((snapShot) => {
             setItems(snapShot.docs.map((doc) => (
                 { id: doc.id, ...doc.data() })
-
             ))
+
+            setLoading(false)
         });
 
     }, [id]);
@@ -73,8 +34,8 @@ const ItemListContainer = () => {
 
     return (
         <div className="container">
-            <h1 className="text-center bg-success p-4 mb-4 text-light text-uppercase">Catalogo de Productos</h1>
-            <ItemList items={items} />
+            <h1 className="text-center bg-success p-4 mb-4 text-light text-uppercase rounded-3">Catalogo de Productos</h1>
+            {loading ? < Loading/> :<ItemList items={items} />}
         </div>
 
     )
