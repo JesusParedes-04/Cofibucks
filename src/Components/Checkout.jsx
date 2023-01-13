@@ -1,4 +1,4 @@
-import { addDoc, doc, collection, getFirestore, updateDoc, writeBatch } from "firebase/firestore"
+import { addDoc, doc, collection, getFirestore, writeBatch, getDoc } from "firebase/firestore"
 import React, { useContext } from "react";
 import { useState } from "react";
 import {Navigate} from "react-router-dom"
@@ -29,9 +29,19 @@ const Checkout = () => {
         const ordersCollection = collection(db, 'orders')
         addDoc(ordersCollection, order).then((snapShot) => {
             setOrderID(snapShot.id)
+   const itemsCollection = collection (db, 'items')
+    let batch = writeBatch(db)
    
+   cart.forEach(item => {
+           let producto = doc(db, "items", item.id)
+        getDoc(producto).then((snapShot)=> {
+            batch.update(producto,{stock:snapShot.data().stock - item.cantidad})
+            batch.commit();
 
-            clear()
+        })
+        })
+
+            clear();
         })
     }
 
