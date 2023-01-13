@@ -73,7 +73,7 @@ const ItemListContainer = () => {
 
     return (
         <div className="container">
-            <h1 className="text-center bg-success p-4 mb-4 text-light">Catalogo de Productos</h1>
+            <h1 className="text-center bg-success p-4 mb-4 text-light text-uppercase">Catalogo de Productos</h1>
             <ItemList items={items} />
         </div>
 

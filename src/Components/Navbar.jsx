@@ -3,6 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
 
 const Navbar = () => {
+
+
   return (
     <div>
       <div className="container">
@@ -103,11 +105,15 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                   </ul>
+
                 </div>
               </div>
             </nav>
           </div>
-          <div className="col-md-6 d-flex align-items-center justify-content-end">
+
+
+
+          <div className=" d-flex col-md-6 align-items-center justify-content-end">
             <CartWidget />
           </div>
         </div>
