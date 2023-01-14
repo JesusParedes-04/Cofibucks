@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
+
+
 const Experienciacofi = ({ mensaje }) => {
   return (
     <div className="container my-5">
