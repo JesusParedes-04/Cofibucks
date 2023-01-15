@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="container-md mt-4">
 
             <div className="row">
-                <div className="col d-flex align-items-center justify-content-center pt-3 pb-3 bg-footer rounded-3">
+                <div className="col d-flex align-items-center justify-content-center pt-4 pb-3 bg-footer rounded-3">
 
 
 

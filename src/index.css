@@ -24,9 +24,13 @@ code {
 }
 
 
+
 .btn-greenHome {
   background-color: rgb(209,231,221);
+
 }
+
+
 
 .bg-greenList {
   background-color: rgb(209,231,221);
@@ -41,6 +45,19 @@ code {
 
 .sm-text {
 color:  rgb(60, 60, 60)
+}
+
+.relleno{
+  background-color: rgb(209,231,221);
+  padding: 9rem
+
+}
+
+.rellenoDanger{
+  background-color:rgb(248,215,218);
+  padding: 9rem;
+color: rgb(74, 23, 28);
+border-radius: 20px;
 }
 
  #darkMode {

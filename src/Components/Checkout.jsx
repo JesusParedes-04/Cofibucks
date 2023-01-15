@@ -54,43 +54,43 @@ const Checkout = () => {
         <div className="container">
             <div className="row my-5">
                 <div className="col-md-6">
-                    <form >
+                    <form className="mt-3">
 
                         <div className="mb-3">
 
-                            <label htmlFor="nombre" className="form-label">Nombre</label>
+                            <label htmlFor="nombre" className="form-label randomDark">Nombre</label>
                             <input type="text" className="form-control" id="nombre" placeholder=" Ingrese su nombre" onInput={(e) => { setNombre(e.target.value) }} />
                         </div>
 
                         <div className="mb-3">
 
-                            <label htmlFor="telefono" className="form-label">Teléfono</label>
+                            <label htmlFor="telefono" className="form-label randomDark">Teléfono</label>
                             <input type="number" className="form-control" id="telefono" placeholder=" Ingrese su Teléfono" onInput={(e) => { setTelefono(e.target.value) }} />
                         </div>
 
 
                         <div className="mb-3">
 
-                            <label htmlFor="email" className="form-label">Email</label>
+                            <label htmlFor="email" className="form-label randomDark">Email</label>
                             <input type="text" className="form-control" id="email" placeholder=" Ingrese su Email" onInput={(e) => { setEmail(e.target.value) }} />
                         </div>
 
 
                         <div className="mb-3">
 
-                            <label htmlFor="email" className="form-label">Dirección</label>
+                            <label htmlFor="email" className="form-label randomDark">Dirección</label>
                             <input type="text" className="form-control" id="direccion" placeholder=" Ingrese su Dirección" onInput={(e) => { setDireccion(e.target.value) }} />
                         </div>
 
-                        <button type="button" className="btn btn-success" onClick={generarOrden}>Generar Orden</button>
+                        <button type="button" className="btn btn-success mt-5" onClick={generarOrden}>Generar Orden</button>
 
                     </form>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 mt-4">
 
                     <table className="table">
 
-                        <tbody>
+                        <tbody className="randomDark">
 
                             {cart.map(item => (
                                 <tr key={item.id}>

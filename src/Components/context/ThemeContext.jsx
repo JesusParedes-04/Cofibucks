@@ -5,14 +5,10 @@ const ThemeContextProvider = ({children}) => {
 
     const [theme, setTheme] = useState('lightMode');
 
-
-
     const toggleTheme = () => {
 
-      
-
-
-      setTheme((curr) => (curr === 'lightMode' ? 'darkMode' : 'lightMode'))
+    
+      setTheme((mode) => (mode === 'lightMode' ? 'darkMode' : 'lightMode'))
   
     }
   

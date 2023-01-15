@@ -12,9 +12,9 @@ const Cart = () => {
             <div className="container-fluid">
                 <div className="row my-5">
                     <div className="col-md-12 text-center">
-                        <div className="alert alert-danger" role="alert">  No se encontraron productos
+                        <div className="rellenoDanger border-3 fw-bold my-5 mx-5 text-uppercase">No se encontraron productos
                         </div>
-                        <Link to={"/"} className="btn btn-warning">Volver a la Página Principal</Link>
+                        <Link to={"/"} className="btn btn-warning mt-4">Volver a la Página Principal</Link>
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@ const Cart = () => {
                     <table className="table">
                         <thead>
                             <tr>
-                                <th scope="col" colSpan={5} className="text-end"><Link onClick={clear} className="btn btn-warning" title={"Vaciar Carrito"}>Vaciar Carrito</Link></th>
+                                <th scope="col" colSpan={5} className="text-end"><Link onClick={clear} className="btn btn-success fw-bold" title={"Vaciar Carrito"}>Vaciar Carrito</Link></th>
                             </tr>
 
                             <tr>
@@ -52,7 +52,7 @@ const Cart = () => {
                                     <td className="align-middle text-end randomDark ">{item.quantity}</td>
                                     <td className="align-middle text-end randomDark ">${item.quantity * item.precio}</td>
                                     <td className="align-middle text-end randomDark">
-                                    <Link onClick={() => { removeItem(item.id) }} title={"Eliminar Producto"}><img src={"/image/trash3.svg"} alt={"Eliminar Producto"} width={25} /></Link></td>
+                                        <Link onClick={() => { removeItem(item.id) }} title={"Eliminar Producto"}><img className="" src={"/image/trash3.svg"} alt={"Eliminar Producto"} width={25} /></Link></td>
                                 </tr>
                             ))
                             }
@@ -61,15 +61,28 @@ const Cart = () => {
                                 <td colSpan={2}>&nbsp;</td>
                                 <td className="text-end randomDark"><b>Total a Pagar</b></td>
                                 <td className="text-end randomDark"><b>${sumTotal()}</b></td>
-                                <td className="text-end randomDark"><Link to={'/Checkout'} className="btn btn-warning">Finalizar Compra</Link></td>
+                                <td className="text-end randomDark"><Link to={'/Checkout'} className="btn btn-success fw-bold">Finalizar Compra</Link></td>
                             </tr>
 
                         </tbody>
                     </table>
 
+                    <div className="pt-5">
+
+
+                        <Link to={"/category"}>
+
+                            <button className="rounded-3 btn btn-success fw-bold border-0 p-3 "> Volver al Catálogo </button>
+
+                        </Link>
+
+
+                    </div>
+
+
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 export default Cart;

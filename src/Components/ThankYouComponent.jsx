@@ -9,15 +9,18 @@ const ThankYouComponent = () => {
 
             <div className="row my-5">
                 <div className="col text-center">
-                    <div className="alert alert-success" role="alert">
+                    <div className="relleno rounded-3">
 
-                        <h1>Gracias Por tu Compra</h1>
-                        <p> Tu Número de Orden es : {id} </p>
+                        <h1 className="text-center">Gracias Por tu Compra</h1>
+                        <p className="text-center"> Tu Número de Orden es : </p>
+                        <p> <b className="text-center"> {id} </b> </p>
+                        
+                     
 
 
                     </div>
 
-                    <Link to={"/"} className="btn btn-warning">Volver a la Página Principal</Link>
+                    <Link to={"/"} className="mt-5 btn btn-success">Volver a la Página Principal</Link>
 
                 </div>
             </div>

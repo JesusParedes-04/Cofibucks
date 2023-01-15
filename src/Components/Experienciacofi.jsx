@@ -48,7 +48,7 @@ const Experienciacofi = ({ mensaje }) => {
 
                 <Link to={"/category"}>
                   
-                <button className="rounded-3 btn btn-success border-0 p-3 ">Escoge tu producto y te lo llevamos </button>
+                <button className="rounded-3 btn btn-success fw-bold border-0">Escoge tu producto y te lo llevamos </button>
 
                       </Link>
 
