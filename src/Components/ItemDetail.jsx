@@ -26,17 +26,19 @@ const ItemDetail = ({ item }) => {
 
     return (
 
+        <div className="container-fluid p-5">
         <div className="row">
             <div className="col-md-4 offset-md-2">
                 <img src={item.Imagen} alt={item.nombre} className="img-fluid" />
             </div>
 
-            <div className="col-md-4">
+            <div className="col-md-4 randomDark">
                 <h1>{item.nombre}</h1>
                 <p>{item.descripcion}</p>
-                <p> <b>${item.precio}</b> </p>
+                <p className="text-center fs-4"> <b>${item.precio}</b> </p>
                 <ItemCount stock={item.stock} onAdd={onAdd} />
             </div>
+        </div>
         </div>
     )
 

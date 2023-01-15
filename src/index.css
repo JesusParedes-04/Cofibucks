@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
@@ -17,12 +18,62 @@ code {
   background-color: rgb(242,240,235);
 }
 
-#darkMode{
+.bg-greenHome {
+  background-color: rgb(209,231,221);
+  padding: 3.6rem;
+}
 
-background-color: rgb(184, 252, 184);
+
+.btn-greenHome {
+  background-color: rgb(209,231,221);
+}
+
+.bg-greenList {
+  background-color: rgb(209,231,221);
+  padding: 30px
+}
+
+
+.bg-footer {
+  background-color: rgb(209,231,221);
 
 }
+
+.sm-text {
+color:  rgb(60, 60, 60)
+}
+
+ #darkMode {
+background-color: rgb(60, 60, 60);
+}
+
+
+#darkMode ul{
+background-color: rgb(60, 60, 60);
+  
+  }
+#darkMode a{
+  color:  white;
+  
+  }
 
 #lightMode {
-  background-color: rgb(124, 152, 163);
+  background-color: rgb(255, 255, 255);
+  color: rgb(60, 60, 60);
 }
+
+ .randomDark {
+
+  color: rgb(60, 60, 60);
+
+}
+
+#darkMode .randomDark {
+
+  color: rgb(255, 255, 255);
+
+}
+
+
+
+

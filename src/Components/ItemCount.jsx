@@ -46,8 +46,8 @@ const ItemCount = ({ stock, onAdd }) => {
 
     return (
         <div>
-            <div className="row mb-3">
-                <div className="col-md-6 text-center">
+            <div className="row mb-4 ">
+                <div className="col-md-6 text-center mx-auto">
                     <div className="btn-group" role="group" aria-label="Basic outlined example">
                         <button type="button" className="btn btn-outline-success" onClick={decrementarStock}>-</button>
                         <button type="button" className="btn btn-outline-success">{counter}</button>
@@ -57,7 +57,7 @@ const ItemCount = ({ stock, onAdd }) => {
             </div>
 
             <div className="row">
-                <div className="col-md-6 text-center">
+                <div className="col-md-6 text-center mx-auto">
 
                     {/* Aplicamos tecnica de rendering */}
 

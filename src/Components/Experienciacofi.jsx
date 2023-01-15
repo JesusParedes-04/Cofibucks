@@ -9,8 +9,8 @@ const Experienciacofi = ({ mensaje }) => {
     <div className="container my-5">
       <div className="row">
         <div className="col-md-12">
-          <div className="alert alert-success text-center" role={"alert"}>
-            <h1 className="text-uppercase">{mensaje}</h1>
+          <div className="bg-greenHome rounded-3" >
+            <h1 className="text-uppercase text-center">{mensaje}</h1>
           </div>
         </div>
 

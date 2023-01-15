@@ -34,8 +34,13 @@ const ItemListContainer = () => {
 
     return (
         <div className="container">
-            <h1 className="text-center bg-success p-4 mb-4 text-light text-uppercase rounded-3">Catalogo de Productos</h1>
+            <h1 className="text-center bg-greenHome p-4 mb-4 text-uppercase rounded-3">Catalogo de Productos</h1>
+
+            <div>
+
             {loading ? < Loading/> :<ItemList items={items} />}
+
+            </div>
         </div>
 
     )
