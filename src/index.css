@@ -17,3 +17,12 @@ code {
   background-color: rgb(242,240,235);
 }
 
+#darkMode{
+
+background-color: rgb(184, 252, 184);
+
+}
+
+#lightMode {
+  background-color: rgb(124, 152, 163);
+}

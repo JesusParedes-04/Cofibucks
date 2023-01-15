@@ -1,11 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link, NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
-
+import ReactSwitch from "react-switch";
+import { ThemeContext } from "./context/ThemeContext";
 
 const Navbar = () => {
 
-
+const {theme, toggleTheme } = useContext(ThemeContext)
 
   return (
     <div>
@@ -108,16 +109,23 @@ const Navbar = () => {
                     </li>
                   </ul>
 
+       
 
                 </div>
               </div>
             </nav>
           </div>
 
-          <div className=" d-flex col-md-4 align-items-center justify-content-end">
-            <CartWidget />
+          <div className=" d-flex col-md-6 align-items-center justify-content-end">
+    
+<div className="me-4">
+          <ReactSwitch onChange={toggleTheme} checked={theme === 'darkMode'} />
           </div>
 
+          <div className="me-5"> 
+            <CartWidget />
+            </div>
+            </div>
         </div>
       </div>
     </div>

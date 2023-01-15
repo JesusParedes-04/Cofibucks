@@ -52,9 +52,6 @@ const Experienciacofi = ({ mensaje }) => {
 
                       </Link>
 
-
-            
-
             </div>
           </div>
           <div className="col-md-6 ">

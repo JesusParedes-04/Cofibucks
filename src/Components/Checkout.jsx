@@ -1,4 +1,4 @@
-import { addDoc, collection, getFirestore } from "firebase/firestore"
+import { addDoc, doc, collection, getFirestore, updateDoc, writeBatch, getDocs } from "firebase/firestore"
 import React, { useContext } from "react";
 import { useState } from "react";
 import {Navigate} from "react-router-dom"
@@ -10,7 +10,7 @@ const Checkout = () => {
     const [telefono, setTelefono] = useState('')
     const [email, setEmail] = useState('')
     const [direccion, setDireccion] = useState('')
-    const [orderID, setOrderID] = useState('')
+    const [orderID, setOrderId] = useState('')
 
 
     const generarOrden = () => {
@@ -18,23 +18,36 @@ const Checkout = () => {
         const order = {
             buyer: { name: nombre, phone: telefono, email: email, direction: direccion },
             items:
-                cart.map(item => ({ id: item.id, title: item.nombre, quantity: item.quantity, price: item.precio, price_total: item.cantidad * item.precio })),
+                cart.map(item => ({ id: item.id, title: item.nombre, quantity: item.quantity, price: item.precio, price_total: item.quantity * item.precio })),
             total: sumTotal(),
             order_date: `${fecha.getFullYear()}-${fecha.getMonth() + 1}-${fecha.getDate()} ${fecha.getHours()}:
                     ${fecha.getMinutes()}:${fecha.getSeconds()}`
 
         }
 
-        const db = getFirestore();
-        const ordersCollection = collection(db, 'orders')
-        addDoc(ordersCollection, order).then((snapShot) => {
-            setOrderID(snapShot.id)
-  
-            clear();
 
+        const db = getFirestore();
+        const ordersCollection = collection(db, "orders");
+        addDoc(ordersCollection, order).then((snapShot) => {
+            setOrderId(snapShot.id);
+            const generatedOrder = doc(db, "orders", snapShot.id); 
+            updateDoc(generatedOrder, {total:order.total * 1.21}); 
+
+            clear();
         });
-      
     }
+
+
+        // const db = getFirestore();
+        // const ordersCollection = collection(db, 'orders')
+        // addDoc(ordersCollection, order).then((snapShot) => {
+        //     setOrderID(snapShot.id)
+  
+        //     clear();
+
+        // });
+      
+    
 
     return (
 
@@ -97,7 +110,6 @@ const Checkout = () => {
 
                         </tbody>
                     </table>
-
 
                 </div>
 

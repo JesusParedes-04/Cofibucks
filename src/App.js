@@ -6,21 +6,25 @@ import ItemListContainer from "./Components/ItemListContainer";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import Experienciacofi from "./Components/Experienciacofi";
+import ThemeContextProvider from "./Components/context/ThemeContext";
 import CartContextProvider from "./Components/context/CartContext";
 import Cart from "./Components/Cart";
 import Checkout from "./Components/Checkout";
 import ThankYouComponent from "./Components/ThankYouComponent";
 
 
+
 function App() {
 
 
 
-  return (
 
+
+  return (
+      <ThemeContextProvider>
         <CartContextProvider>
           <BrowserRouter>
-            <Navbar/>         
+            <Navbar />
             <Routes>
               <Route path={"/"} element={<Home />} />
               <Route path={"/experiencia"} element={<Experienciacofi mensaje={'Sumate a la experiencia Cofi'} />} />
@@ -29,13 +33,13 @@ function App() {
               <Route path={"/item/:id"} element={<ItemDetailContainer />} />
               <Route path={"/cart"} element={<Cart />} />
               <Route path={"/checkout"} element={<Checkout />} />
-              <Route path={"/Thankyou/:id"} element={<ThankYouComponent/>} />
+              <Route path={"/Thankyou/:id"} element={<ThankYouComponent />} />
               <Route path={"*"} element={<Error404 />} />
             </Routes>
             <Footer />
           </BrowserRouter>
         </CartContextProvider>
-
+      </ThemeContextProvider>
   );
 }
 
