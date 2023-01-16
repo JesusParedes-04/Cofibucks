@@ -43,16 +43,16 @@ const Cart = () => {
                         </thead>
 
 
-                        <tbody>
+                        <tbody  className="randomDark">
 
                             {cart.map(item => (
                                 <tr key={item.id}>
                                     <td><img src={item.Imagen} alt={item.nombre} width={60} /></td>
-                                    <td className="align-middle randomDark ">{item.nombre}</td>
-                                    <td className="align-middle text-end randomDark ">{item.quantity}</td>
-                                    <td className="align-middle text-end randomDark ">${item.quantity * item.precio}</td>
-                                    <td className="align-middle text-end randomDark">
-                                        <Link onClick={() => { removeItem(item.id) }} title={"Eliminar Producto"}><img className="" src={"/image/trash3.svg"} alt={"Eliminar Producto"} width={25} /></Link></td>
+                                    <td className="align-middle  ">{item.nombre}</td>
+                                    <td className="align-middle text-end  ">{item.quantity}</td>
+                                    <td className="align-middle text-end  ">${item.quantity * item.precio}</td>
+                                    <td className="align-middle text-end ">
+                                        <Link onClick={() => { removeItem(item.id) }} title={"Eliminar Producto"}><img src={"/image/trash3.svg"} alt={"Eliminar Producto"} width={25} /></Link></td>
                                 </tr>
                             ))
                             }
