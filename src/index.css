@@ -56,10 +56,11 @@ color:  rgb(60, 60, 60)
 
 .rellenoDanger{
   background-color:rgb(248,215,218);
-  padding: 9rem;
 color: rgb(74, 23, 28);
-border-radius: 20px;
+padding: 9rem;
 }
+
+
 
  #darkMode {
 background-color: rgb(60, 60, 60);

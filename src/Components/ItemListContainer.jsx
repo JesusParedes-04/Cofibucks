@@ -33,8 +33,8 @@ const ItemListContainer = () => {
 
 
     return (
-        <div className="container">
-            <h1 className="text-center bg-greenHome p-4 mb-4 text-uppercase rounded-3">Catalogo de Productos</h1>
+        <div className="container-fluid">
+            <h1 className="text-center bg-greenHome p-4 mb-4 mt-4 text-uppercase rounded-3">Catalogo de Productos</h1>
 
             <div>
 
