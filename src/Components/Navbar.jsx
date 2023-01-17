@@ -69,11 +69,11 @@ const Navbar = () => {
 
                         <li>
                           <NavLink
-                            className="nav-link active"
+                            className="nav-link"
                             activeclassname="page"
                             to={"/category/frappuchino"}
                           >
-                            Frappuchino
+                            Frappuccino
                           </NavLink>
                         </li>
                         <li>

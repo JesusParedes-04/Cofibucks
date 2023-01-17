@@ -3,6 +3,9 @@ import React, { useContext } from "react";
 import { useState } from "react";
 import {Navigate} from "react-router-dom"
 import { CartContext } from "./context/CartContext"
+import Swal from 'sweetalert2'
+
+
 
 const Checkout = () => {
     const { cart, clear, sumTotal } = useContext(CartContext)
@@ -22,6 +25,8 @@ const Checkout = () => {
             total: sumTotal(),
             order_date: `${fecha.getFullYear()}-${fecha.getMonth() + 1}-${fecha.getDate()} ${fecha.getHours()}:
                     ${fecha.getMinutes()}:${fecha.getSeconds()}`
+
+                    
 
         }
 
@@ -47,8 +52,6 @@ const Checkout = () => {
 
         // });
       
-    
-
     return (
 
         <div className="container">
