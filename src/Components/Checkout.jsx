@@ -3,7 +3,8 @@ import React, { useContext } from "react";
 import { useState } from "react";
 import {Navigate} from "react-router-dom"
 import { CartContext } from "./context/CartContext"
-import Swal from 'sweetalert2'
+
+
 
 
 
