@@ -4,13 +4,13 @@ const Loading = () => {
 
     return (
 
-        <div className="container">
+        <div className="container loading">
 
             <div className="row my-5">
-                <div className="col text-center">
+                <div className="col text-center m-5">
                     <div className="spinner-grow text-success" role="status">
 
-                        <span className="visually-hidden">Cargando</span>
+                        <span className="visually-hidden ">Cargando</span>
 
                     </div>
                 </div>

@@ -25,7 +25,11 @@ code {
 
 }
 
+.loading{
 
+  height: 20rem;
+
+}
 
 .btn-greenHome {
   background-color: rgb(209,231,221);

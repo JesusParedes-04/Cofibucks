@@ -25,11 +25,11 @@ const Cart = () => {
     } else {
 
         return (
-            <div className="container">
+            <div className="container mt-5">
                 <div className="row">
-                    <div className="col-md-12">
+                    <div className="col-md-12 mt-5">
 
-                        <div className="table-responsive-sm">
+                        <div className="table-responsive-sm mt-5">
                             <table className="table">
                                 <thead>
                                     <tr>
@@ -74,7 +74,7 @@ const Cart = () => {
                     </div>
 
                     </div>
-                    <div className="pt-5">
+                    <div className="mt-5 pb-5">
 
                         <Link to={"/category"}>
 

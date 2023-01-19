@@ -1,9 +1,8 @@
-import { addDoc, doc, collection, getFirestore, updateDoc } from "firebase/firestore"
+import { addDoc, doc, collection, getFirestore, getDoc, writeBatch } from "firebase/firestore"
 import React, { useContext } from "react";
 import { useState } from "react";
-import {Navigate} from "react-router-dom"
+import { Navigate } from "react-router-dom"
 import { CartContext } from "./context/CartContext"
-
 
 
 
@@ -17,6 +16,7 @@ const Checkout = () => {
     const [orderID, setOrderId] = useState('')
 
 
+
     const generarOrden = () => {
         const fecha = new Date();
         const order = {
@@ -25,33 +25,29 @@ const Checkout = () => {
                 cart.map(item => ({ id: item.id, title: item.nombre, quantity: item.quantity, price: item.precio, price_total: item.quantity * item.precio })),
             total: sumTotal(),
             order_date: `${fecha.getFullYear()}-${fecha.getMonth() + 1}-${fecha.getDate()} ${fecha.getHours()}:
-                    ${fecha.getMinutes()}:${fecha.getSeconds()}`
-
-                    
+                              ${fecha.getMinutes()}:${fecha.getSeconds()}`
 
         }
-
 
         const db = getFirestore();
         const ordersCollection = collection(db, "orders");
         addDoc(ordersCollection, order).then((snapShot) => {
             setOrderId(snapShot.id);
-            const generatedOrder = doc(db, "orders", snapShot.id); 
-            updateDoc(generatedOrder, {total:order.total * 1.21}); 
+            const batch = writeBatch(db);
 
+            cart.forEach(item => {
+                let producto = doc(db, "items", item.id);
+                getDoc(producto).then((snapShot) => {
+                    batch.update(producto, {stock:snapShot.data().stock - item.quantity});
+                });
+            });
+            
+            batch.commit();
             clear();
         });
     }
 
 
-        // const db = getFirestore();
-        // const ordersCollection = collection(db, 'orders')
-        // addDoc(ordersCollection, order).then((snapShot) => {
-        //     setOrderID(snapShot.id)
-  
-        //     clear();
-
-        // });
       
     return (
 
@@ -59,9 +55,7 @@ const Checkout = () => {
             <div className="row my-5">
                 <div className="col-md-6">
                     <form className="mt-3">
-
                         <div className="mb-3">
-
                             <label htmlFor="nombre" className="form-label randomDark">Nombre</label>
                             <input type="text" className="form-control" id="nombre" placeholder=" Ingrese su nombre" onInput={(e) => { setNombre(e.target.value) }} />
                         </div>
@@ -86,10 +80,13 @@ const Checkout = () => {
                             <input type="text" className="form-control" id="direccion" placeholder=" Ingrese su Dirección" onInput={(e) => { setDireccion(e.target.value) }} />
                         </div>
 
-                        <button type="button" className="btn btn-success mt-5" onClick={generarOrden}>Generar Orden</button>
+                        <button type="button" className="btn btn-success mt-5" onClick={generarOrden} >Generar Orden</button>
 
                     </form>
                 </div>
+
+
+                
                 <div className="col-md-6 mt-4">
 
                     <table className="table">
@@ -121,7 +118,11 @@ const Checkout = () => {
 
             <div className="row">
                 <div className="col text-center">
-                    {orderID !== "" ? <Navigate to= {"/Thankyou/" + orderID} /> : "" }
+
+               
+                {orderID !== "" ? <Navigate to={"/thankyou/" + orderID} /> : ""}
+
+              
                 </div>
             </div>
 

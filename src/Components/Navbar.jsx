@@ -59,7 +59,7 @@ const Navbar = () => {
                       <ul className="dropdown-menu">
                         <li>
                           <NavLink
-                            className="nav-link active"
+                            className="nav-link"
                             activeclassname="page"
                             to={"/category"}
                           >
