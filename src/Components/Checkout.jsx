@@ -14,7 +14,20 @@ const Checkout = () => {
     const [email, setEmail] = useState('')
     const [direccion, setDireccion] = useState('')
     const [orderID, setOrderId] = useState('')
+const [mensaje, setMensaje] = useState(false)
 
+    const validar = (e) =>{
+e.preventDefault()
+if(!nombre || !telefono || !email || !direccion)
+{setMensaje(true)
+
+return
+}
+
+setMensaje(false)
+ generarOrden()
+
+    }
 
 
     const generarOrden = () => {
@@ -55,6 +68,9 @@ const Checkout = () => {
             <div className="row my-5">
                 <div className="col-md-6">
                     <form className="mt-3">
+                        {mensaje && ( <div className="bg-danger text-light rounded-3 p-2 text-center fw-bolder text-uppercase mb-4">
+                            Todos los campos son obligatorios
+                              </div>)}
                         <div className="mb-3">
                             <label htmlFor="nombre" className="form-label randomDark">Nombre</label>
                             <input type="text" className="form-control" id="nombre" placeholder=" Ingrese su nombre" onInput={(e) => { setNombre(e.target.value) }} />
@@ -80,7 +96,7 @@ const Checkout = () => {
                             <input type="text" className="form-control" id="direccion" placeholder=" Ingrese su Dirección" onInput={(e) => { setDireccion(e.target.value) }} />
                         </div>
 
-                        <button type="button" className="btn btn-success mt-5" onClick={generarOrden} >Generar Orden</button>
+                        <button type="button" className="btn btn-success mt-5" onClick={validar} >Generar Orden</button>
 
                     </form>
                 </div>
