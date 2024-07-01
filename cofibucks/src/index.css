@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+/* Todo background de text tendrá border de 20px */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.bg-experiencia {
+
+  background-color: rgb(242,240,235);
+}
+
+.bg-greenHome {
+  background-color: rgb(209,231,221);
+  padding: 3.7rem;
+
+
+}
+
+.loading{
+
+  height: 20rem;
+
+}
+
+.btn-greenHome {
+  background-color: rgb(209,231,221);
+}
+
+
+/* product  */
+.bg-greenList {
+  background-color: rgb(209,231,221);
+  padding: 30px
+}
+
+
+
+.sm-text {
+color:  rgb(60, 60, 60)
+}
+
+.relleno{
+  background-color: rgb(209,231,221);
+  padding: 9rem
+
+}
+
+.rellenoDanger{
+  background-color:rgb(248,215,218);
+color: rgb(74, 23, 28);
+padding: 9rem;
+}
+
+.img-logo{
+  border-radius: 60px;
+}
+
+ #darkMode {
+background-color:  #143B32
+}
+
+
+#darkMode ul{
+background-color: #143B32
+  
+  }
+#darkMode a{
+  color:  white;
+  
+  }
+
+#lightMode {
+  background-color: rgb(255, 255, 255);
+  color: rgb(60, 60, 60);
+}
+
+ .randomDark {
+
+  color: rgb(60, 60, 60);
+
+}
+
+#darkMode .randomDark {
+
+  color: rgb(255, 255, 255);
+
+}
+
+.footer-class{
+
+border-radius: 10px;
+background-color: #01643E
+}
+
+
+
+/* Type of Coffe */
+
+.overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+     /* Por resolver: background-color: rgba(0, 0, 0, 0.3); Color de fondo con opacidad */
+color: rgb(178, 211, 196);
+text-transform: uppercase;
+;
+}
+
+.text-center:hover .overlay {
+  opacity: 1; 
+}
+
+/* Main Tittle and Img */
+
+.maintext {
+  font-size: 100px;
+  text-transform: uppercase;
+  color: #01643E;
+  font-weight: bolder;
+}
+
+.main-heading {
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+.subtitle {
+  font-size: 35px;
+  top: 30%;
+  margin-top: 10px;
+}
+
+.tittle-products {
+  color: #93c2b2;
+}
+
+/* Estilos para tablets */
+@media (max-width: 768px) {
+  .maintext {
+    font-size: 75px;
+  }
+
+  .subtitle {
+    font-size: 21px;
+    top: 30%;
+    margin-top: 20px;
+
+  }
+}
+
+/* Estilos para celulares */
+@media (max-width: 576px) {
+  .maintext {
+    font-size: 50px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    top: 65%;
+    margin-top: 60px;
+  }
+}

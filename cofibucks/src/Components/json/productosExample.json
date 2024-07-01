@@ -1,0 +1,161 @@
+
+
+
+[
+
+    
+    {
+        "id": 1,
+        "nombre": "Retro Frappuccino",
+        "descripcion": "Frappuccino sin café de vainilla e inclusión de mango dragon fruit terminado con crema batida.",
+        "categoria": "frappuchino",
+        "precio": 1500,
+        "stock": 10,
+        "Imagen": "https://www.starbucks.pe/Multimedia/productos/RETRO_FRAPPUCCINO_202405031709509334.PNG"
+    },
+    {
+        "id": 2,
+        "nombre": "Matcha Frappuccino Alto",
+        "descripcion": "Frappuccino a base de matcha y leche, decorado con crema batida, sin café. Imágenes referenciales",
+        "precio": 1300,
+        "stock": 5,
+        "categoria": "frappuchino",
+        "Imagen": "https://www.starbucks.pe/Multimedia/productos/MATCHA_FRAPPUCCINO_ECOMMERCE_V1.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Chocolate Crème Frappuccino Alto",
+        "descripcion": "Clásico frappuccino de chocolate mezclado con leche y jarabe de azucar, decorado con crema batida. Imágenes referenciales.",
+        "precio": 1000,
+        "stock": 7,
+        "categoria": "frappuchino",
+        "Imagen": "https://www.starbucks.pe/Multimedia/productos/CHOCOLATE_CREME_FRAPP_V2.png"
+    },
+    {
+        "id": 4,
+        "nombre": "Chocolate Cookies & Creme Frappuccino Alto",
+        "descripcion": "Clásico frappuccino de leche batido con mocha y gotas sabor a chocolate, jarabe de azúcar y decorado con crema batida y topping de galletas trozadas.",
+        "categoria": "frappuchino",
+        "precio": 1800,
+        "stock": 10,
+        "Imagen": "https://www.starbucks.pe/Multimedia/productos/CHOCOLATE_COOKIES_CREAM_FRAPPUCCINO_202303061807246058.PNG"
+    },
+
+
+    {
+        "id": 5,
+        "nombre": "Peppermint Mocha Frappuccino Grande",
+        "descripcion": "Bebida de salsa de chocolate y jarabe de menta combinados con café y leche, mezclada con hielo. Cubierta con crema batida y baño de mocha. No incluye endulzantes adicionales.",
+        "categoria": "frappuchino",
+        "precio": 1700,
+        "stock": 7,
+        "Imagen": "https://www.starbucks.pe/Multimedia/productos/detalle/Peppermint_Mocha_Latte_Frappuccino_v1.png"
+    },
+
+
+    {
+        "id": 6,
+        "nombre": "Caramel Frappuccino Alto",
+        "descripcion": "Frappuccino de café mezclado con leche y endulzado con caramelo, decorado con crema batida y topping de caramelo. Imágenes referenciales",
+        "categoria": "frappuchino",
+        "precio": 1700,
+        "stock": 7,
+        "Imagen": "https://www.starbucks.pe/Multimedia/productos/CARAMEL_FRAPP_V2.png"
+    },
+
+
+    {
+        "id": 7,
+        "nombre": "Mocha Macchiato con bebida de avena",
+        "descripcion": "Un macchiatto con un twist, agregamos cocoa, topping de mocha y deliciosa bebida de avena vaporizada. Sin endulzantes adicionales. Imágenes referenciales.",
+        "categoria": "cafe-expreso",
+        "precio": 900,
+        "stock": 10,
+        "Imagen": "https://www.starbucks.pe/Multimedia/productos/COCOA_MACCHIATO_CON_LECHE_DE_AVENA_ECOMMERCE.png"
+    },
+
+    {
+        "id": 8,
+        "nombre": "Americano Alto",
+        "descripcion": "Café Espresso de cuerpo completo con agua caliente. En caso la pidas por Delivery, la bebida se entregará en un vaso de tamaño mayor para evitar derrames.",
+        "categoria": "cafe-expreso",
+        "precio": 900,
+        "stock": 10,
+        "Imagen": "https://www.starbucks.pe/Multimedia/productos/AMERICANO_V2.png"
+    },
+    {
+        "id": 9,
+        "nombre": "Latte Alto",
+        "descripcion": "Café Espresso de cuerpo completo mezclado con leche vaporizada. Sin endulzantes. Imágenes referenciales.",
+        "categoria": "cafe-expreso",
+        "precio": 900,
+        "stock": 10,
+        "Imagen": "https://www.starbucks.pe/Multimedia/productos/LATTE_V2.png"
+    },
+    {
+        "id": 10,
+        "nombre": "Mocha café Alto",
+        "descripcion": "Café Espresso mezclado con mocha y leche vaporizada. Sin endulzantes. Imágenes referenciales.",
+        "categoria": "cafe-expreso",
+        "precio": 900,
+        "stock": 10,
+        "Imagen": "https://www.starbucks.pe/Multimedia/productos/MOCHA_CAFE_V2.png"
+    },
+    {
+        "id":11,
+        "nombre": "Latte Macchiato Alto",
+        "descripcion": "Leche vaporizada coronada con shots de intenso café espresso. Sin endulzantes. Imágenes referenciales.",
+        "categoria": "cafe-expreso",
+        "precio": 900,
+        "stock": 10,
+        "Imagen": "https://www.starbucks.pe/Multimedia/productos/LATTE_MACHIATTO_V2.png"
+    },
+
+    {
+        "id": 12,
+        "nombre": "Chocolate Shaken Espresso Frío Alto",
+        "descripcion": "Bebida intensa de café espresso con salsa mocha y cubos de hielo con bebida de avena. Imágenes referenciales.",
+        "categoria": "shaken-expresso",
+        "precio": 900,
+        "stock": 10,
+        "Imagen": "https://www.starbucks.pe/Multimedia/productos/ICED_CHOCOLATE_OATMILK_SHAKEN_ESPRESSO_ECOMMERCE.png"
+    },
+    {
+        "id": 13,
+        "nombre": "Brown Sugar Shaken Espresso Frio con Bebida de Avena Alto",
+        "descripcion": "Bebida helada hecha a base de espresso, jarabe de azúcar morena y canela en polvo completada con bebida de avena y cubos de hielo..",
+        "categoria": "shaken-expresso",
+        "precio": 900,
+        "stock": 10,
+        "Imagen": "https://www.starbucks.pe/Multimedia/productos/MOCHA_CAFE_V2.png"
+    },
+    {
+        "id":14,
+        "nombre": "Toasted Vanilla Shaken Espresso Frio con Bebida de Avena Alto",
+        "descripcion": "Bebida helada hecha a base de espresso, jarabe de vainilla tostada, completada con bebida de avena y cubos de hielo.",
+        "categoria": "shaken-expresso",
+        "precio": 900,
+        "stock": 10,
+        "Imagen": "https://www.starbucks.pe/Multimedia/productos/LATTE_MACHIATTO_V2.png"
+    },
+
+    {
+        "id": 15,
+        "nombre": "Cheesecake de Chocolate",
+        "descripcion": "Cheesecake con base de doble galleta de chocolate, crema sabor a vainilla, cubierto con cobertura bitter, decorado con crema chantilly, brownie y crema de avellanas. Porción individual. Imágenes referenciales.",
+        "categoria": "postres",
+        "precio": 900,
+        "stock": 10,
+        "Imagen": "https://www.starbucks.pe/Multimedia/productos/CHEESECAKE_DE_CHOCOLATE_V2.png"
+    },
+    {
+        "id": 16,
+        "nombre": "Banana Bread",
+        "descripcion": "Biscocho a base plátanos y frutos secos.",
+        "categoria": "postres",
+        "precio": 900,
+        "stock": 10,
+        "Imagen": "https://www.starbucks.pe/Multimedia/productos/BANANA_BREAD_202405290954349522.PNG"
+    }
+
+]
