@@ -1,8 +1,36 @@
-# React + Vite
+# Cofibucks - Ecommerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Se realizó una actualización del ecommerce desde Create React App a React Vite. Se mejoró la interfaz y algunas funcionalidades. Se utilizaron algunas dependencias como firebase, react router dom, react-switch, react icons, etc.
 
-Currently, two official plugins are available:
+## Instalación
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clona este repositorio.
+2. Ejecuta `npm install` para instalar las dependencias.
+3. Utiliza los siguientes comandos:
+   npm run dev: Inicia el servidor de desarrollo con Vite.
+
+Puedes ver el ecommerce en funcionamiento aquí:
+https://cofibucks.netlify.app/
+
+PD: Este proyecto se estará actualizando constantemente
+
+###############################################################################################
+
+# Cofibucks - Ecommerce
+
+An update of the ecommerce from Create React App to React Vite was made. The interface and some functionalities were improved. Some dependencies such as firebase, react router dom, react-switch, react icons, etc. were used.
+
+## Installation
+
+1. Clone this repository.
+2. Run 'npm install' to install the dependencies.
+3. Use the following commands:
+   npm run dev: Starts the development server with Vite.
+
+You can see the eCommerce in operation here:
+https://cofibucks.netlify.app/
+
+PD: This project will be constantly updated
+
+
+
